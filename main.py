@@ -1,11 +1,20 @@
 def main():
 
     numbers = []
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
+
+    for i in range(0,5):
+        value = int(input(f'Enter value {i+1}: '))
+        numbers.append(value)
+        
+    minval = numbers[0]
+    maxval = numbers[0]
+    
+    for num in numbers:
+        if num < minval:
+            minval = num
+        if num > maxval:
+            maxval = num
+            
 
     print(*numbers)
     print(maxval, minval)
